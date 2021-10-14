@@ -1,0 +1,87 @@
+[
+  {
+    "word": "spirit animal",
+    "reason": "The problem is that spirit animals are an important part of the belief system of some cultures and refer to a spirit that “helps guide or protect a person on a journey and whose characteristics that person shares or embodies.” Referring to something as your spirit animal is cultural appropriation. Avoid using it.",
+    "replace_with": ["kindred spirit", "raison d'etre"]
+  },
+  {
+    "word": "sherpa",
+    "reason": "Unless you mean someone who hails from Tibetan stock and lives in theNepalese Himalayas serving as a porter on mountain-climbing expeditions, it is not a Sherpa.",
+    "replace_with": ["guide", "coach"]
+  },
+  {
+    "word": "guru",
+    "reason": "The word guru comes from Buddhist and Hindu religions and refers to a spiritual guide or leader who is held in high esteem. Using the term casually in referring to yourself or someone is disrespectful because it diminishes the importance of the title and its origins.",
+    "replace_with": ["doyen", "virtuoso", "authority", "maestro"]
+  },
+  {
+    "word": "ninja",
+    "reason": "The term’s origins refer to “a member of a feudal Japanese society of mercenary agents, highly trained in martial arts and stealth (ninjutsu), who were hired for covert purposes ranging from espionage to sabotage and assassination.” People misuse the term to claim expertise in an area.",
+    "replace_with": ["expert", "whiz", "ace"]
+  },
+  {
+    "word": "nazi",
+    "reason": "It describes people who were members of the National Socialist German Workers’ Party, which controlled Germany from 1933–1945 under Adolf Hitler. Using the term casually, as in grammar Nazi or fun Nazi, makes light of the horrible atrocities they committed.",
+    "replace_with": ["boss", "absolutist"]
+  },
+  {
+    "word": "binge",
+    "reason": "We throw around terms like binge-watch and cleaning binge all the time when, in fact, the word binge originates from serious eating disorders, including Binge Eating Disorder and bulimia, and should be reserved for discussions about them. Choosing to watch every episode of The Office in a weekend is a choice, whereas bingeing disorders are not a choice and their severity shouldn’t be diminished.",
+    "replace_with": ["indulged", "spree", "wallowed", "satiated"]
+  },
+  {
+    "word": "scalp",
+    "reason": "Used as a noun to refer to the top of your head, scalp is fine. It’s when it’s used as a verb that we get into dangerous territory. Using it to say someone ripped you off or to infer that you got robbed is making light of what was a very gruesome act involving “a part of [the] integument [of the upper part of the head] with the accompanying hair, severed from the head of an enemy as a sign of victory, as by some North American Indians and others during the colonial and frontier periods in the US.”",
+    "replace_with": ["fleeced", "robbed", "hustled", "pulled a fast one"]
+  },
+  {
+    "word": "gyp",
+    "reason": "It comes from the word Gypsy, who are Romani people. There are already plenty of negative associations with the term gypsy, and using gypped to say you got ripped off only perpetuates the negative stereotypes.",
+    "replace_with": ["ripoff", "bamboozled", "shortchanged", "fraud"]
+  },
+  {
+    "word": "hysterical",
+    "reason": "If you find something or someone to be hysterical, meaning funny, that’s OK. If you’re calling someone’s actions hysterical because they’re being emotional, then you may want to reconsider. Far too often women are dubbed hysterical for being outspoken or showing their feelings, and that wades into problematic, sexist territory due to the history of the term. Hysterical’s earliest meaning was “of, relating to, or characterized by hysteria,” and while we now think of hysteria as irrational panic, it was, for centuries, a medical diagnosis. Hysteria comes from the Greek hysterikós, which means “suffering in the womb.” So, yeah, the ancient Greeks believed that when a woman was behaving irrationally—or in a way that they considered to be irrational—it was because her uterus was literally wandering around her body causing trouble (Kory Stamper, “What It Really Means To Call A Woman Hysterical“).",
+    "replace_with": ["intense", "impassioned", "piercing", "vehement"]
+  },
+  {
+    "word": "lame",
+    "reason": "\"Lame\" was originally used in reference to people with reduced mobility due to physical disability. The word is now tossed around everywhere to mean \"uncool\" and \"unappealing.\" Disability rights activists have long called for the word to phase out. We have a responsibility to respect that.",
+    "replace_with": [
+      "old hat",
+      "hackneyed",
+      "stodgy",
+      "jejune",
+      "pedestrian",
+      "humdrum"
+    ]
+  },
+  {
+    "word": "retarded",
+    "reason": "The term \"mental retardation\" is a stale, clinical term once used to label what we now call intellectual disabilities. Using the term to mean \"stupid\" devalues those with intellectual disabilities, which should make you question your word choice.",
+    "replace_with": [
+      "If you are using it as a descriptor for a person with an intellectual disability in a context where such a descriptor is necessary, you could replace it with a term that does not have the same derogatory connotation, or the name of the actual disability if relevant.",
+      "If you are using it to insult someone (e.g. \"You're such a retard\") then don't."
+    ]
+  },
+  {
+    "word": "blacklist",
+    "reason": "Black is too often used in a negative context (with the opposite being referred to as white). Please consider using alternatives when they convey the same meaning.",
+    "replace_with": ["blocklist"]
+  },
+  {
+    "word": "whitelist",
+    "reason": "Black & white are often used in contexts where white is the positive item, and black the negative item. Please consider using alternatives when they convey the same meaning.",
+    "replace_with": ["allowlist"]
+  },
+  {
+    "word": "master",
+    "reason": "Master (in context of master/slave) is often used in computer terminology when leader/follower, or primary/replica are as meaningful and don't have a connotation of slavery.",
+    "replace_with": ["leader", "primary"]
+  },
+  {
+    "word": "slave",
+    "reason": "Master (in context of master/slave) is often used in computer terminology when leader/follower, or primary/replica are as meaningful and don't have a connotation of slavery.",
+    "replace_with": ["follower", "replica"]
+  }
+]
