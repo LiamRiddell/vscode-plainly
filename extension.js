@@ -104,18 +104,7 @@ function activate(context) {
 	// This line of code will only be executed once when your extension is activated
 
 	// Get configuration
-	//  const contentConfig = vscode.workspace.getConfiguration('contenter');
-
-	// Test
-	// 	const textStorage = `spirit animal
-	// The problem is that spirit animals are an important part of the belief system of some cultures and refer to a spirit that “helps guide or protect a person on a journey and whose characteristics that person shares or embodies.” Referring to something as your spirit animal is cultural appropriation. Avoid using it.
-	// kindred spirit,raison
-
-	// example
-	// The problem is that spirit animals are an important part of the belief system of some cultures and refer to a spirit that “helps guide or protect a person on a journey and whose characteristics that person shares or embodies.” Referring to something as your spirit animal is cultural appropriation. Avoid using it.
-	// another, one, two three`;
-
-
+	// const contentConfig = vscode.workspace.getConfiguration('contenter');
 	// 	const parsed = parseMultitextOptionsStructure(textStorage, [
 	// 		{
 	// 			fieldName: "word",
@@ -131,116 +120,126 @@ function activate(context) {
 	// 		}
 	// 	]);
 
-
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('contenter.contentfyLint', function () {
+
 		// The code you place here will be executed every time your command is executed
-
-		// Get the active text editor
-		const editor = vscode.window.activeTextEditor;
-
-		if (!editor)
-			return;
-
-		let document = editor.document;
-
-		// Get the document text
-		const documentText = document.getText();
-
-		// Decorations
-		const decorationsArray = new Array();
-
-		// Create Editor Decoration
-		const warningDecorationType = vscode.window.createTextEditorDecorationType({
-			backgroundColor: "rgba(253, 167, 0, 0.24)",
-			//textDecoration: "underline dotted yellow"
-		});
-
-		WORDLIST_PROBLEMATIC.forEach(problematicWord => {
-			// Generate a regex pattern for this word
-			// 1. Global Search = g
-			// 2. Ignore Case = i
-			// 3. Generate indices for substring matches = d
-			var searchWordRegex = new RegExp(`${problematicWord.word}`, 'gid');
-
-			// Search the document for the dynamic regex
-			var results = [...documentText.matchAll(searchWordRegex)];
-
-			// If we have no results then check the next word
-			if (!results)
-				return;
-
-			results.forEach(match => {
-				// // Get the line number by counting the number of newline characters (\n) before the character position
-				// // of our search result. 
-				// const lines = [...match.input.substr(0, match.index).matchAll(/\n/gi)];
-				// const lineNumber = lines.length + 1;
-
-				// // Get the number of characters before the found line
-				// const noOfCharactersBeforeLineNumber = lines[lines.length - 1].index
-
-				// Use VS Code to get the line number and character position of the match. Saves us doing the above.
-				const startPos = document.positionAt(match.index);
-				const endPos = document.positionAt(match.index + problematicWord.word.length);
-				const range = new vscode.Range(startPos, endPos);
-
-				// Log for now
-				console.log(`[Contenter] ${problematicWord.word}: Found on line ${startPos.line} at column ${startPos.character}`);
-
-				/// Create Hover message (uses markdown)
-				const capitalizedWord = problematicWord.word.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
-				const markdownTemplate = new vscode.MarkdownString("", false);
-				markdownTemplate.isTrusted = true;
-
-				// Title
-				markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
-				markdownTemplate.appendText("\n");
-
-				// Codeblock used for description
-				markdownTemplate.appendMarkdown(`*${problematicWord.reason}*`);
-				markdownTemplate.appendText("\n");
-
-				// Alternatives
-				markdownTemplate.appendMarkdown(`Alternatives:`);
-				markdownTemplate.appendText("\n");
-
-				problematicWord.replace_with.forEach(replaceWord => {
-					markdownTemplate.appendMarkdown(`- ${replaceWord}`);
-					markdownTemplate.appendText("\n");
-				});
-
-				markdownTemplate.appendMarkdown(`______________________`);
-				markdownTemplate.appendText("\n");
-				markdownTemplate.appendMarkdown(`*Provided by Contenter*`);
-
-
-				// Create Decoration
-				const decoration = {
-					range: range,
-					hoverMessage: markdownTemplate
-				}
-
-				// Push the decoration to our array
-				decorationsArray.push(decoration);
-			});
-		});
-
-		// Set the decorations
-		if (decorationsArray.length > 0)
-			editor.setDecorations(warningDecorationType, decorationsArray);
+		scanDocumentAgainstWordlists();
 
 		// Display a message box to the user
-		vscode.window.showInformationMessage(`Contentify: Finished Scanning Document and found ${decorationsArray.length} issues.`);
+		vscode.window.showInformationMessage(`Contentify: Finished Scanning Document.`);
 	});
 
 	context.subscriptions.push(disposable);
+
+	// When the document is saved 
+	// vscode.workspace.onWillSaveTextDocument(_ => scanDocumentAgainstWordlists());
 }
 
 // this method is called when your extension is deactivated
 function deactivate() { }
 
+// The main function which scans document for the instances of the words present in the wordlists. 
+// This function also handles decorating the editor.
+function scanDocumentAgainstWordlists() {
+	// Get the active text editor
+	const editor = vscode.window.activeTextEditor;
+
+	if (!editor)
+		return;
+
+	let document = editor.document;
+
+	// We can remove this as we don't really have a dependency on the document type
+	if (document.languageId !== "markdown") {
+		vscode.window.showInformationMessage(`Contentify: Unable to scan non Markdown document.`);
+		return;
+	}
+
+	// Get the document text
+	const documentText = document.getText();
+
+	// Decorations
+	const decorationsArray = new Array();
+
+	// Create Editor Decoration
+	const warningDecorationType = vscode.window.createTextEditorDecorationType({
+		backgroundColor: "rgba(253, 167, 0, 0.24)",
+		//textDecoration: "underline dotted yellow"
+	});
+
+	for (let wordDefinitionIndex = 0; wordDefinitionIndex < WORDLIST_PROBLEMATIC.length; wordDefinitionIndex++) {
+		// Get the current word definition from our wordlist array
+		const wordDefinition = WORDLIST_PROBLEMATIC[wordDefinitionIndex];
+
+		// Generate a regex pattern for this word
+		// 1. Global Search = g
+		// 2. Ignore Case = i
+		// 3. Generate indices for substring matches = d
+		var searchWordRegex = new RegExp(`${wordDefinition.word}`, 'gid');
+
+		// Search the document for the dynamic regex
+		var searchResults = [...documentText.matchAll(searchWordRegex)];
+
+		// If we have no results then check the next word
+		if (!searchResults)
+			return;
+
+		for (let searchResultIndex = 0; searchResultIndex < searchResults.length; searchResultIndex++) {
+			const searchResult = searchResults[searchResultIndex];
+
+			// Get the line number by counting the number of newline characters (\n) before the character position
+			// Use VS Code to get the line number and character position of the match. Saves us doing the above.
+			const startPos = document.positionAt(searchResult.index);
+			const endPos = document.positionAt(searchResult.index + wordDefinition.word.length);
+			const range = new vscode.Range(startPos, endPos);
+
+			/// Create Hover message (uses markdown)
+			const capitalizedWord = wordDefinition.word.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
+			const markdownTemplate = new vscode.MarkdownString("", false);
+			markdownTemplate.isTrusted = true;
+
+			// Title
+			markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
+			markdownTemplate.appendText("\n");
+
+			// Codeblock used for description
+			markdownTemplate.appendMarkdown(`*${wordDefinition.reason}*`);
+			markdownTemplate.appendText("\n");
+
+			// Alternatives
+			markdownTemplate.appendMarkdown(`Alternatives:`);
+			markdownTemplate.appendText("\n");
+
+			wordDefinition.replace_with.forEach(replaceWord => {
+				markdownTemplate.appendMarkdown(`- ${replaceWord}`);
+				markdownTemplate.appendText("\n");
+			});
+
+			markdownTemplate.appendMarkdown(`______________________`);
+			markdownTemplate.appendText("\n");
+			markdownTemplate.appendMarkdown(`*Provided by Contenter*`);
+
+			// Create Decoration
+			const decoration = {
+				range: range,
+				hoverMessage: markdownTemplate
+			}
+
+			// Push the decoration to our array
+			decorationsArray.push(decoration);
+		}
+	}
+
+	// Set the decorations
+	if (decorationsArray.length > 0)
+		editor.setDecorations(warningDecorationType, decorationsArray);
+
+}
+
+// Boilerplate: Entry Points for VS Code.
 module.exports = {
 	activate,
 	deactivate
