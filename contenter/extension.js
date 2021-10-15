@@ -54,14 +54,8 @@ function activate(context) {
 			return;
 		}
 
-		// Starting
-		vscode.window.showInformationMessage(`Contenter: Starting Document Scan.`);
-
 		// Our main logic function
 		contenterfy(editor);
-
-		// Ending  
-		vscode.window.showInformationMessage(`Contenter: Finished Scanning Document.`);
 	});
 
 	let uncontenterfyCommand = vscode.commands.registerCommand('contenter.clear', function () {

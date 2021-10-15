@@ -15,16 +15,6 @@
   ],
   "main": "./contenter/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "contenter.lint",
-        "title": "Contenter: Lint Active Document"
-      },
-      {
-        "command": "contenter.clear",
-        "title": "Contenter: Clear Active Document"
-      }
-    ],
     "configuration": {
       "title": "Contenter",
       "properties": {
@@ -35,7 +25,38 @@
           "description": "Enable the problematic wordlist when linting documents."
         }
       }
-    }
+    },
+    "menus": {
+      "editor/title": [
+        {
+          "when": "resourceLangId == markdown",
+          "command": "contenter.lint",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceLangId == markdown",
+          "command": "contenter.clear",
+          "group": "navigation"
+        },
+        {
+          "when": "resourceLangId == markdown",
+          "command": "contenter.lint",
+          "group": "navigation"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "contenter.lint",
+        "title": "Contenter: Check Document"
+      },
+      {
+        "command": "contenter.clear",
+        "title": "Contenter: Clear Document"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
