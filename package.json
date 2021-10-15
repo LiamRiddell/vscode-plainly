@@ -23,20 +23,11 @@
     "configuration": {
       "title": "Contenter",
       "properties": {
-        "contenter.wordLists.problematic": {
-          "type": "string",
-          "description": "This is the list of problematic words.",
-          "editPresentation": "multilineText",
-          "default": ""
-        },
-        "contenter.wordLists.problematicCustom": {
-          "type": "array",
-          "markdownDescription": "A list of relative file paths pointing to JSON files following the [custom data format](https://github.com/microsoft/vscode-css-languageservice/blob/master/docs/customData.md).\n\nVS Code loads custom data on startup to enhance its CSS support for the custom CSS properties, at directives, pseudo classes and pseudo elements you specify in the JSON files.\n\nThe file paths are relative to workspace and only workspace folder settings are considered.",
-          "default": [],
-          "items": {
-            "type": "string",
-            "description": "Relative path to a custom word list file"
-          }
+        "contenter.enableWordLists.problematic": {
+          "type": "boolean",
+          "scope": "resource",
+          "default": true,
+          "description": "Enable the problematic wordlist when linting documents."
         }
       }
     }
