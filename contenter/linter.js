@@ -1,11 +1,30 @@
 const vscode = require('vscode');
+const Utils = require('./utils');
+const Configuration = require('./configuration');
 
 // Word Lists
 const WORDLIST_PROBLEMATIC = require('./wordlists/problematic.json');
 
 const Linter = {
     lint(editor) {
-        // Note: We're using array deconstruction to get the decorations by severity
+        // Optimization: Decorate Everything together
+        const high = [], medium = [], low = [];
+
+        // Lint: Problematic words (provided by problematic wordlist)
+        if (Configuration.settings.enableWordLists.problematic) {
+
+            const [problematicHigh, problematicMedium, problematicLow] = this.lintProblematic(editor);
+
+            // Spread push our problematic words to the severity arrays
+            high.push(...problematicHigh);
+            medium.push(...problematicMedium);
+            low.push(...problematicLow);
+        }
+
+        // Note: We can add additional linters here
+
+        // Use array deconstruction to access individual arrays
+        return [high, medium, low];
     },
 
     lintProblematic(editor) {
@@ -13,7 +32,7 @@ const Linter = {
         // We also provide a callback that's called when we're generating the hover markdown
         return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_PROBLEMATIC, (wordDefinition, markdownTemplate) => {
             // Title
-            const capitalizedWord = wordDefinition.word.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
+            const capitalizedWord = Utils.capitaliseFirstLetters(wordDefinition.word);
             markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
             markdownTemplate.appendText("\n");
 
@@ -21,7 +40,7 @@ const Linter = {
             markdownTemplate.appendText("\n");
             markdownTemplate.appendMarkdown(`______________________`);
             markdownTemplate.appendText("\n");
-            const sensitivity = wordDefinition.sensitivity.replace(/(^\w|\s\w)/g, m => m.toUpperCase()) || "Low";
+            const sensitivity = Utils.capitaliseFirstLetters(wordDefinition.sensitivity) || "Low";
             markdownTemplate.appendText(`Sensitivity: ${sensitivity}`);
             markdownTemplate.appendText("\n");
             markdownTemplate.appendMarkdown(`______________________`);

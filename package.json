@@ -10,14 +10,19 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:contenter.contentfyLint"
+    "onCommand:contenter.lint",
+    "onCommand:contenter.clear"
   ],
-  "main": "./extension.js",
+  "main": "./contenter/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "contenter.contentfyLint",
-        "title": "Contenter: Check Document"
+        "command": "contenter.lint",
+        "title": "Contenter: Lint Active Document"
+      },
+      {
+        "command": "contenter.clear",
+        "title": "Contenter: Clear Active Document"
       }
     ],
     "configuration": {

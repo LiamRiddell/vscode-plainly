@@ -1,6 +1,7 @@
 const vscode = require('vscode');
 
 const Decorator = {
+    decorationTuples: [],
     decorationTypes: {
         sensitivity: {
             high: vscode.window.createTextEditorDecorationType({
@@ -82,6 +83,38 @@ const Decorator = {
             // Decorate the editor
             editor.setDecorations(decorationTuple.decorationType, decorationTuple.decorationOptions);
         }
+    },
+
+    undecorate(editor) {
+        // if (!decorationTuples || decorationTuples.length <= 0 || !editor)
+        //     return;
+
+        // for (let decorationTupleIndex = 0; decorationTupleIndex < decorationTuples.length; decorationTupleIndex++) {
+        //     const decorationTuple = decorationTuples[decorationTupleIndex];
+
+        //     // If the fields we require are not present ignore
+        //     if (!decorationTuple.decorationType || !decorationTuple.decorationOptions)
+        //         continue;
+
+        //     // If the there are no ranges to decorate then we can ignore
+        //     if (decorationTuples.length <= 0)
+        //         continue;
+
+        //     // Decorate the editor
+        //     editor.setDecorations(decorationTuple.decorationType, []);
+        // }
+
+        // Clear the decorations for each type
+        editor.setDecorations(this.decorationTypes.sensitivity.high, []);
+        editor.setDecorations(this.decorationTypes.sensitivity.medium, []);
+        editor.setDecorations(this.decorationTypes.sensitivity.low, []);
+    },
+
+    // Used when we unload our extension
+    dispose() {
+        this.decorationTypes.sensitivity.high.dispose();
+        this.decorationTypes.sensitivity.medium.dispose();
+        this.decorationTypes.sensitivity.low.dispose();
     }
 };
 
