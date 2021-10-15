@@ -11,10 +11,6 @@ const Configuration = require('./configuration');
  */
 // This method will only be executed once when your extension is activated
 function activate(context) {
-	// Set the configuration on activation and register to new configuration changes
-	vscode.workspace.onDidChangeConfiguration(Configuration.onConfigurationChange);
-	Configuration.updateConfiguration();
-
 	// When the document is saved 
 	// vscode.workspace.onWillSaveTextDocument(_ => scanDocumentAgainstWordlists());
 

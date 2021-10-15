@@ -13,7 +13,7 @@ const Linter = {
         const high = [], medium = [], low = [];
 
         // Lint: Problematic words (provided by problematic wordlist)
-        if (Configuration.settings.enableWordLists.problematic) {
+        if (Configuration.get().enableWordLists.problematic) {
 
             const [problematicHigh, problematicMedium, problematicLow] = this.lintProblematic(editor);
 
