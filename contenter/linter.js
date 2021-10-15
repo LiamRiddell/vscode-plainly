@@ -6,6 +6,8 @@ const Configuration = require('./configuration');
 const WORDLIST_PROBLEMATIC = require('./wordlists/problematic.json');
 
 const Linter = {
+    _cachedHoverPreview: new Map(),
+
     lint(editor) {
         // Optimization: Decorate Everything together
         const high = [], medium = [], low = [];
@@ -104,14 +106,25 @@ const Linter = {
             if (!searchResults)
                 continue;
 
-            // Optimization: Generate hover message for word (once)
-            const markdownTemplate = new vscode.MarkdownString("", false);
 
-            // Security: This will sanitize html
-            markdownTemplate.isTrusted = false;
 
-            // Callback for populating the markdown template by reference 
-            hoverMessageCallback(wordDefinition, markdownTemplate);
+            // Optimization: Generate hover message for word (once)  
+            const markdownTemplateCached = this._cachedHoverPreview.get(wordDefinition.word);
+            const markdownTemplate = markdownTemplateCached || new vscode.MarkdownString("", false);
+
+            // Optimization: Generate hover message for word (once) but cache it 
+            if (!markdownTemplateCached) {
+
+                // Security: This will sanitize html
+                markdownTemplate.isTrusted = false;
+
+                // Callback for populating the markdown template by reference 
+                hoverMessageCallback(wordDefinition, markdownTemplate);
+
+                // Cache the hover preview
+                this._cachedHoverPreview.set(wordDefinition.word, markdownTemplate);
+
+            }
 
             // Iterate the search results and calculate the ranges
             for (let searchResultIndex = 0; searchResultIndex < searchResults.length; searchResultIndex++) {
