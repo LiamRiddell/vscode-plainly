@@ -1,32 +1,10 @@
+// https://github.com/microsoft/vscode-extension-samples
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
 const Linter = require('./linter');
 const Decorator = require('./decorator');
 const Configuration = require('./configuration');
-
-// 
-function contenterfy(editor) {
-
-	// Lint: Lints each wordlist only if enabled in configuration
-	const [high, medium, low] = Linter.lint(editor);
-
-	// Decorate: Highlight all the findings using sensitivity
-	Decorator.decorate(editor, [
-		{
-			decorationType: Decorator.decorationTypes.sensitivity.high,
-			decorationOptions: high
-		},
-		{
-			decorationType: Decorator.decorationTypes.sensitivity.medium,
-			decorationOptions: medium
-		},
-		{
-			decorationType: Decorator.decorationTypes.sensitivity.low,
-			decorationOptions: low
-		}
-	]);
-}
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -54,8 +32,24 @@ function activate(context) {
 			return;
 		}
 
-		// Our main logic function
-		contenterfy(editor);
+		// Lint: Lints each wordlist only if enabled in configuration
+		const [high, medium, low] = Linter.lint(editor);
+
+		// Decorate: Highlight all the findings using sensitivity
+		Decorator.decorate(editor, [
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.high,
+				decorationOptions: high
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.medium,
+				decorationOptions: medium
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.low,
+				decorationOptions: low
+			}
+		]);
 	});
 
 	let uncontenterfyCommand = vscode.commands.registerCommand('contenter.clear', function () {
