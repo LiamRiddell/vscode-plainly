@@ -79,6 +79,12 @@ const Linter = {
         // Get the document text
         const documentText = document.getText();
 
+        if (!documentText || documentText.length <= 0)
+            return [[], [], []];
+
+        // Get the search mode
+        const isExperimentalSearchEnabled = Configuration.get().experimental.search.advancedSearch;
+
         // Decorations based on severity
         const highDecorationsArray = [],
             mediumDecorationsArray = [],
@@ -97,16 +103,15 @@ const Linter = {
             // 1. Global Search = g
             // 2. Ignore Case = i
             // 3. Generate indices for substring matches = d
-            var searchWordRegex = new RegExp(`${wordDefinition.word}`, 'gid');
+            const searchWordPattern = isExperimentalSearchEnabled ? wordDefinition.word.split("").join("(?: |_|-|)") : wordDefinition.word;
+            const searchWordRegex = new RegExp(`${searchWordPattern}`, 'gid');
 
             // Search the document for the dynamic regex
-            var searchResults = [...documentText.matchAll(searchWordRegex)];
+            const searchResults = [...documentText.matchAll(searchWordRegex)];
 
             // If we have no results then check the next word
-            if (!searchResults)
+            if (!searchResults || searchResults.length <= 0)
                 continue;
-
-
 
             // Optimization: Generate hover message for word (once)  
             const markdownTemplateCached = this._cachedHoverPreview.get(wordDefinition.word);
@@ -123,7 +128,6 @@ const Linter = {
 
                 // Cache the hover preview
                 this._cachedHoverPreview.set(wordDefinition.word, markdownTemplate);
-
             }
 
             // Iterate the search results and calculate the ranges
@@ -133,7 +137,7 @@ const Linter = {
                 // Get the line number by counting the number of newline characters (\n) before the character position
                 // Use VS Code to get the line number and character position of the match. Saves us doing the above.
                 const startPos = document.positionAt(searchResult.index);
-                const endPos = document.positionAt(searchResult.index + wordDefinition.word.length);
+                const endPos = document.positionAt(searchResult.index + searchResult[0].length);
                 const range = new vscode.Range(startPos, endPos);
 
                 // Push the decoration to an array based on severity levels

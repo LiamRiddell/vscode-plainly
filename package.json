@@ -18,6 +18,12 @@
     "configuration": {
       "title": "Contenter",
       "properties": {
+        "contenter.experimental.search.advancedSearch": {
+          "type": "boolean",
+          "scope": "resource",
+          "default": true,
+          "description": "Enable the advanced search, which tries handle code snippets and basic search bypass techniques."
+        },
         "contenter.enableWordLists.problematic": {
           "type": "boolean",
           "scope": "resource",
