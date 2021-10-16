@@ -16,7 +16,7 @@
   "main": "./plainly/extension.js",
   "contributes": {
     "configuration": {
-      "title": "plainly",
+      "title": "Plainly",
       "properties": {
         "plainly.experimental.search.advancedSearch": {
           "type": "boolean",
