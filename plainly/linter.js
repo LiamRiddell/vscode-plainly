@@ -70,7 +70,7 @@ const Linter = {
             markdownTemplate.appendText("\n");
             markdownTemplate.appendMarkdown(`______________________`);
             markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`*Provided by Contenter*`);
+            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
         });
     },
 

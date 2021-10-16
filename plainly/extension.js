@@ -18,13 +18,13 @@ function activate(context) {
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
 	// The code you place in the function will be executed every time your command is executed
-	let contenterfyCommand = vscode.commands.registerCommand('contenter.lint', function () {
+	let lintCommand = vscode.commands.registerCommand('plainly.lint', function () {
 
 		// Get the active editor
 		const editor = vscode.window.activeTextEditor;
 
 		if (!editor) {
-			vscode.window.showErrorMessage("Contenter: Unable to get the active editor.")
+			vscode.window.showErrorMessage("Plainly: Unable to get the active editor.")
 			return;
 		}
 
@@ -48,20 +48,20 @@ function activate(context) {
 		]);
 	});
 
-	let uncontenterfyCommand = vscode.commands.registerCommand('contenter.clear', function () {
+	let clearCommand = vscode.commands.registerCommand('plainly.clear', function () {
 
 		// Get the active editor
 		const editor = vscode.window.activeTextEditor;
 
 		if (!editor) {
-			vscode.window.showErrorMessage("Contenter: Unable to get the active editor.")
+			vscode.window.showErrorMessage("Plainly: Unable to get the active editor.")
 			return;
 		}
 
 		Decorator.undecorate(editor);
 	});
 
-	context.subscriptions.push(contenterfyCommand, uncontenterfyCommand);
+	context.subscriptions.push(lintCommand, clearCommand);
 }
 
 // This method is called when your extension is deactivated

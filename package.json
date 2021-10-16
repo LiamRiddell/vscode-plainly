@@ -1,6 +1,6 @@
 {
-  "name": "contenter",
-  "displayName": "Contenter",
+  "name": "plainly",
+  "displayName": "Plainly",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -10,21 +10,21 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:contenter.lint",
-    "onCommand:contenter.clear"
+    "onCommand:plainly.lint",
+    "onCommand:plainly.clear"
   ],
-  "main": "./contenter/extension.js",
+  "main": "./plainly/extension.js",
   "contributes": {
     "configuration": {
-      "title": "Contenter",
+      "title": "plainly",
       "properties": {
-        "contenter.experimental.search.advancedSearch": {
+        "plainly.experimental.search.advancedSearch": {
           "type": "boolean",
           "scope": "resource",
           "default": true,
           "description": "Enable the advanced search, which tries handle code snippets and basic search bypass techniques."
         },
-        "contenter.enableWordLists.problematic": {
+        "plainly.enableWordLists.problematic": {
           "type": "boolean",
           "scope": "resource",
           "default": true,
@@ -36,31 +36,31 @@
       "editor/title": [
         {
           "when": "resourceLangId == markdown",
-          "command": "contenter.lint",
+          "command": "plainly.lint",
           "group": "navigation"
         }
       ],
       "editor/context": [
         {
           "when": "resourceLangId == markdown",
-          "command": "contenter.clear",
+          "command": "plainly.clear",
           "group": "navigation"
         },
         {
           "when": "resourceLangId == markdown",
-          "command": "contenter.lint",
+          "command": "plainly.lint",
           "group": "navigation"
         }
       ]
     },
     "commands": [
       {
-        "command": "contenter.lint",
-        "title": "Contenter: Check Document"
+        "command": "plainly.lint",
+        "title": "Plainly: Check Document"
       },
       {
-        "command": "contenter.clear",
-        "title": "Contenter: Clear Document"
+        "command": "plainly.clear",
+        "title": "Plainly: Clear Document"
       }
     ]
   },

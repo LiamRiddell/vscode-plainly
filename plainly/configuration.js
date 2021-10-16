@@ -1,7 +1,7 @@
 const vscode = require('vscode');
 
 const Configuration = {
-    _name: "contenter",
+    _name: "plainly",
 
     get() {
         return vscode.workspace.getConfiguration(Configuration._name);
