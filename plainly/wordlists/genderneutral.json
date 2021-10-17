@@ -3,6 +3,7 @@
     "word": "man",
     "reason": "fsdfsd",
     "replacements": ["kindred spirit", "raison d'etre"],
-    "sensitivity": "high"
+    "sensitivity": "high",
+    "sensitivity2": "high"
   }
 ]
