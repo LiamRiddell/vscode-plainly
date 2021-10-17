@@ -1,4 +1,5 @@
 [
+
   {
     "word": "spirit animal",
     "reason": "The problem is that spirit animals are an important part of the belief system of some cultures and refer to a spirit that “helps guide or protect a person on a journey and whose characteristics that person shares or embodies.” Referring to something as your spirit animal is cultural appropriation. Avoid using it.",
@@ -98,5 +99,92 @@
     "reason": "Master (in context of master/slave) is often used in computer terminology when leader/follower, or primary/replica are as meaningful and don't have a connotation of slavery.",
     "replacements": ["follower", "replica"],
     "sensitivity": "high"
+  },
+  {
+    "word": "Kiev",
+    "reason": "Use Kyiv (derived from the Ukrainian language name) instead of Kiev (derived from the Russian language name) as the name of the Ukrainian capital..",
+    "replacements": ["Kyiv"],
+    "sensitivity": "high"
+  },
+  
+
+  
+  {
+    "word": "ensure",
+    "reason": "There is a simpler word.",
+    "replacements": ["make sure"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "enable",
+    "reason": "There is a simpler word.",
+    "replacements": ["allow"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "generate",
+    "reason": "There is a simpler word.",
+    "replacements": ["produce, give, make"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "hitherto",
+    "reason": "There is a simpler word.",
+    "replacements": ["until now"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "utilize",
+    "reason": "There is a simpler word.",
+    "replacements": ["use, apply"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "accurate",
+    "reason": "There is a simpler word.",
+    "replacements": ["correct, exact, right"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "advise",
+    "reason": "There is a simpler word.",
+    "replacements": ["recommend, tell"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "anticipate",
+    "reason": "There is a simpler word.",
+    "replacements": ["expect"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "a number of",
+    "reason": "There is a simpler word.",
+    "replacements": ["some"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "appropriate",
+    "reason": "There is a simpler word.",
+    "replacements": ["proper, right"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "contains",
+    "reason": "There is a simpler word.",
+    "replacements": ["has"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "eliminate",
+    "reason": "There is a simpler word.",
+    "replacements": ["cut, drop, end"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "assistance",
+    "reason": "There is a simpler word.",
+    "replacements": ["help"],
+    "sensitivity": "medium"
   }
 ]
