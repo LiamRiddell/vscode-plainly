@@ -42,12 +42,10 @@
       ],
       "editor/context": [
         {
-          "when": "resourceLangId == markdown",
           "command": "plainly.clear",
           "group": "navigation"
         },
         {
-          "when": "resourceLangId == markdown",
           "command": "plainly.lint",
           "group": "navigation"
         }
