@@ -24,11 +24,41 @@
           "default": true,
           "description": "Enable the advanced search, which tries handle code snippets and basic search bypass techniques."
         },
+        "plainly.enableWordLists.complex": {
+          "type": "boolean",
+          "scope": "resource",
+          "default": true,
+          "description": "Enable the complex wordlist when linting documents."
+        },
+        "plainly.enableWordLists.genderNeutral": {
+          "type": "boolean",
+          "scope": "resource",
+          "default": true,
+          "description": "Enable the gender neutral wordlist when linting documents."
+        },
+        "plainly.enableWordLists.inclusive": {
+          "type": "boolean",
+          "scope": "resource",
+          "default": true,
+          "description": "Enable the inclusive wordlist when linting documents."
+        },
+        "plainly.enableWordLists.jargon": {
+          "type": "boolean",
+          "scope": "resource",
+          "default": true,
+          "description": "Enable the jargon wordlist when linting documents."
+        },
         "plainly.enableWordLists.problematic": {
           "type": "boolean",
           "scope": "resource",
           "default": true,
           "description": "Enable the problematic wordlist when linting documents."
+        },
+        "plainly.enableWordLists.redundant": {
+          "type": "boolean",
+          "scope": "resource",
+          "default": true,
+          "description": "Enable the redundant wordlist when linting documents."
         }
       }
     },

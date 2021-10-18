@@ -3,42 +3,75 @@ const Utils = require('./utils');
 const Configuration = require('./configuration');
 
 // Word Lists
+const WORDLIST_COMPLEX = require('./wordlists/complex.json');
+const WORDLIST_GENDER_NEUTRAL = require('./wordlists/genderneutral.json');
+const WORDLIST_INCLUSIVE = require('./wordlists/inclusive.json');
+const WORDLIST_JARGON = require('./wordlists/jargon.json');
 const WORDLIST_PROBLEMATIC = require('./wordlists/problematic.json');
+const WORDLIST_REDUNDANT = require('./wordlists/redundant.json');
 
 const Linter = {
     _cachedHoverPreview: new Map(),
 
     lint(editor) {
         // Optimization: Decorate Everything together
-        const high = [], medium = [], low = [];
+        const allHigh = [], allMedium = [], allLow = [];
 
-        // Lint: Problematic words (provided by problematic wordlist)
-        if (Configuration.get().enableWordLists.problematic) {
-
-            const [problematicHigh, problematicMedium, problematicLow] = this.lintProblematic(editor);
-
-            // Spread push our problematic words to the severity arrays
-            high.push(...problematicHigh);
-            medium.push(...problematicMedium);
-            low.push(...problematicLow);
+        // Lint: Gender Neutral words
+        if (Configuration.get().enableWordLists.genderNeutral) {
+            const [high, medium, low] = this.lintGenderNeutral(editor);
+            allHigh.push(...high);
+            allMedium.push(...medium);
+            allLow.push(...low);
         }
 
-        // Note: We can add additional linters here
+        // Lint: Inclusive words
+        if (Configuration.get().enableWordLists.inclusive) {
+            const [high, medium, low] = this.lintInclusive(editor);
+            allHigh.push(...high);
+            allMedium.push(...medium);
+            allLow.push(...low);
+        }
+
+        // Lint: Jargon words
+        if (Configuration.get().enableWordLists.jargon) {
+            const [high, medium, low] = this.lintJargon(editor);
+            allHigh.push(...high);
+            allMedium.push(...medium);
+            allLow.push(...low);
+        }
+
+        // Lint: Problematic words
+        if (Configuration.get().enableWordLists.problematic) {
+            const [high, medium, low] = this.lintProblematic(editor);
+
+            // Spread push our problematic words to the severity arrays
+            allHigh.push(...high);
+            allMedium.push(...medium);
+            allLow.push(...low);
+        }
+
+        // Lint: Inclusive words
+        if (Configuration.get().enableWordLists.redundant) {
+            const [high, medium, low] = this.lintRedundant(editor);
+            allHigh.push(...high);
+            allMedium.push(...medium);
+            allLow.push(...low);
+        }
 
         // Use array deconstruction to access individual arrays
-        return [high, medium, low];
+        return [allHigh, allMedium, allLow];
     },
 
-    lintProblematic(editor) {
-        // Lint the document against the problematic wordlist
-        // We also provide a callback that's called when we're generating the hover markdown
-        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_PROBLEMATIC, (word, wordDefinition, markdownTemplate) => {
+    // Complex Wordlist
+    lintComplex(editor) {
+        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_COMPLEX, (word, wordDefinition, markdownTemplate) => {
             // Title
             const capitalizedWord = Utils.capitaliseFirstLetters(word);
             markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
             markdownTemplate.appendText("\n");
 
-            // Add sensitivity
+            // Sensitivity
             markdownTemplate.appendText("\n");
             markdownTemplate.appendMarkdown(`______________________`);
             markdownTemplate.appendText("\n");
@@ -74,8 +107,217 @@ const Linter = {
         });
     },
 
+    // Gender Neutral Wordlist
+    lintGenderNeutral(editor) {
+        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_GENDER_NEUTRAL, (word, wordDefinition, markdownTemplate) => {
+            // Title
+            const capitalizedWord = Utils.capitaliseFirstLetters(word);
+            markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
+            markdownTemplate.appendText("\n");
+
+            // Sensitivity
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            const sensitivity = Utils.capitaliseFirstLetters(wordDefinition.sensitivity) || "Low";
+            markdownTemplate.appendText(`Sensitivity: ${sensitivity}`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+
+            // Codeblock used for description
+            markdownTemplate.appendMarkdown(`*${wordDefinition.reason}*`);
+            markdownTemplate.appendText("\n");
+
+            // Alternatives
+            if (wordDefinition.replacements && wordDefinition.replacements.length > 0) {
+                markdownTemplate.appendMarkdown(`Replacement(s): `);
+                for (let i = 0; i < wordDefinition.replacements.length; i++) {
+                    const word = wordDefinition.replacements[i];
+
+                    if (i === 0) {
+                        markdownTemplate.appendMarkdown(`${word}`);
+                    } else {
+                        markdownTemplate.appendMarkdown(`, ${word}`);
+                    }
+                }
+            }
+
+            // Plugin signature
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+        });
+    },
+
+    // Inclusive Wordlist
+    lintInclusive(editor) {
+        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_INCLUSIVE, (word, wordDefinition, markdownTemplate) => {
+            // Title
+            const capitalizedWord = Utils.capitaliseFirstLetters(word);
+            markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
+            markdownTemplate.appendText("\n");
+
+            // Sensitivity
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            const sensitivity = Utils.capitaliseFirstLetters(wordDefinition.sensitivity) || "Low";
+            markdownTemplate.appendText(`Sensitivity: ${sensitivity}`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+
+            // Codeblock used for description
+            markdownTemplate.appendMarkdown(`*${wordDefinition.reason}*`);
+            markdownTemplate.appendText("\n");
+
+            // Alternatives
+            if (wordDefinition.replacements && wordDefinition.replacements.length > 0) {
+                markdownTemplate.appendMarkdown(`Replacement(s): `);
+                for (let i = 0; i < wordDefinition.replacements.length; i++) {
+                    const word = wordDefinition.replacements[i];
+
+                    if (i === 0) {
+                        markdownTemplate.appendMarkdown(`${word}`);
+                    } else {
+                        markdownTemplate.appendMarkdown(`, ${word}`);
+                    }
+                }
+            }
+
+            // Plugin signature
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+        });
+    },
+
+    // Jargon Wordlist
+    lintJargon(editor) {
+        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_JARGON, (word, wordDefinition, markdownTemplate) => {
+            // Title
+            const capitalizedWord = Utils.capitaliseFirstLetters(word);
+            markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
+            markdownTemplate.appendText("\n");
+
+            // Sensitivity
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            const sensitivity = Utils.capitaliseFirstLetters(wordDefinition.sensitivity) || "Low";
+            markdownTemplate.appendText(`Sensitivity: ${sensitivity}`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+
+            // Codeblock used for description
+            markdownTemplate.appendMarkdown(`*${wordDefinition.reason}*`);
+            markdownTemplate.appendText("\n");
+
+            // Alternatives
+            if (wordDefinition.replacements && wordDefinition.replacements.length > 0) {
+                markdownTemplate.appendMarkdown(`Replacement(s): `);
+                for (let i = 0; i < wordDefinition.replacements.length; i++) {
+                    const word = wordDefinition.replacements[i];
+
+                    if (i === 0) {
+                        markdownTemplate.appendMarkdown(`${word}`);
+                    } else {
+                        markdownTemplate.appendMarkdown(`, ${word}`);
+                    }
+                }
+            }
+
+            // Plugin signature
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+        });
+    },
+
+    // Problematic Wordlist
+    lintProblematic(editor) {
+        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_PROBLEMATIC, (word, wordDefinition, markdownTemplate) => {
+            // Title
+            const capitalizedWord = Utils.capitaliseFirstLetters(word);
+            markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
+            markdownTemplate.appendText("\n");
+
+            // Sensitivity
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            const sensitivity = Utils.capitaliseFirstLetters(wordDefinition.sensitivity) || "Low";
+            markdownTemplate.appendText(`Sensitivity: ${sensitivity}`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+
+            // Codeblock used for description
+            markdownTemplate.appendMarkdown(`*${wordDefinition.reason}*`);
+            markdownTemplate.appendText("\n");
+
+            // Alternatives
+            if (wordDefinition.replacements && wordDefinition.replacements.length > 0) {
+                markdownTemplate.appendMarkdown(`Replacement(s): `);
+                for (let i = 0; i < wordDefinition.replacements.length; i++) {
+                    const word = wordDefinition.replacements[i];
+
+                    if (i === 0) {
+                        markdownTemplate.appendMarkdown(`${word}`);
+                    } else {
+                        markdownTemplate.appendMarkdown(`, ${word}`);
+                    }
+                }
+            }
+
+            // Plugin signature
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+        });
+    },
+
+    // Redundant Wordlist
+    lintRedundant(editor) {
+        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_REDUNDANT, (word, wordDefinition, markdownTemplate) => {
+            // Title
+            const capitalizedWord = Utils.capitaliseFirstLetters(word);
+            markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
+            markdownTemplate.appendText("\n");
+
+            // Sensitivity
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            const sensitivity = Utils.capitaliseFirstLetters(wordDefinition.sensitivity) || "Low";
+            markdownTemplate.appendText(`Sensitivity: ${sensitivity}`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+
+            // Codeblock used for description
+            markdownTemplate.appendMarkdown(`*${wordDefinition.reason}*`);
+            markdownTemplate.appendText("\n");
+
+            // Plugin signature
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+        });
+    },
+
     // Private: 
     _lintDocumentAgainstWordlist(document, wordlist, hoverMessageCallback) {
+        if (wordlist.length <= 0)
+            return [[], [], []];
+
         // Get the document text
         const documentText = document.getText();
 

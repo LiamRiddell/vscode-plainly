@@ -1,519 +1,521 @@
 [
-    {
-      "word": "ensure",
-      "reason": "There is a simpler word.",
-      "replacements": ["make sure"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "enable",
-      "reason": "There is a simpler word.",
-      "replacements": ["allow"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "generate",
-      "reason": "There is a simpler word.",
-      "replacements": ["produce, give, make"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "hitherto",
-      "reason": "There is a simpler word.",
-      "replacements": ["until now"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "utilize",
-      "reason": "There is a simpler word.",
-      "replacements": ["use, apply"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "accurate",
-      "reason": "There is a simpler word.",
-      "replacements": ["correct, exact, right"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "advise",
-      "reason": "There is a simpler word.",
-      "replacements": ["recommend, tell"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "anticipate",
-      "reason": "There is a simpler word.",
-      "replacements": ["expect"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "a number of",
-      "reason": "There is a simpler word.",
-      "replacements": ["some"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "appropriate",
-      "reason": "There is a simpler word.",
-      "replacements": ["proper, right"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "contains",
-      "reason": "There is a simpler word.",
-      "replacements": ["has"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "eliminate",
-      "reason": "There is a simpler word.",
-      "replacements": ["cut, drop, end"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "assistance",
-      "reason": "There is a simpler word.",
-      "replacements": ["help"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "failed to",
-      "reason": "There is a simpler word.",
-      "replacements": ["didn't"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "finalize",
-      "reason": "There is a simpler word.",
-      "replacements": ["complete, finish"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "is able to",
-      "reason": "There is a simpler word.",
-      "replacements": ["can"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "on a monthly basis",
-      "reason": "There is a simpler word.",
-      "replacements": ["monthly"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "plethora",
-      "reason": "There is a simpler word.",
-      "replacements": ["a lot, myriad"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "in order to",
-      "reason": "There is a simpler word.",
-      "replacements": ["to"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "feasible",
-      "reason": "There is a simpler word.",
-      "replacements": ["can be done"],
-      "sensitivity": "medium"
-    }, 
-    {
-      "word": "frequently",
-      "reason": "There is a simpler word.",
-      "replacements": ["often"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "identical",
-      "reason": "There is a simpler word.",
-      "replacements": ["same"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "identify",
-      "reason": "There is a simpler word.",
-      "replacements": ["find, name, show"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "immediately",
-      "reason": "There is a simpler word.",
-      "replacements": ["at once"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "in addition",
-      "reason": "There is a simpler word.",
-      "replacements": ["also, besides, too"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "accomplish",
-      "reason": "There is a simpler word.",
-      "replacements": ["do, finish"],
-      "sensitivity": "medium"
-    },
-  
-    {
-      "word": "additional",
-      "reason": "There is a simpler word.",
-      "replacements": ["extra, more"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "adjustment",
-      "reason": "There is a simpler word.",
-      "replacements": ["change, alteration"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "approximately",
-      "reason": "There is a simpler word.",
-      "replacements": ["about, roughly"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "attempt",
-      "reason": "There is a simpler word.",
-      "replacements": ["try"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "clarification",
-      "reason": "There is a simpler word.",
-      "replacements": ["help, explanation"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "communicate",
-      "reason": "There is a simpler word.",
-      "replacements": ["talk, write (be specific)"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "complete",
-      "reason": "There is a simpler word.",
-      "replacements": ["fill in, finish"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "difficulties",
-      "reason": "There is a simpler word.",
-      "replacements": ["problems"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "disclose",
-      "reason": "There is a simpler word.",
-      "replacements": ["tell, show"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "eligible",
-      "reason": "There is a simpler word.",
-      "replacements": ["allowed, qualified"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "facilitate",
-      "reason": "There is a simpler word.",
-      "replacements": ["help"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "illustrate",
-      "reason": "There is a simpler word.",
-      "replacements": ["show, explain"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "in lieu of",
-      "reason": "Avoid archaic language.",
-      "replacements": ["instead of"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "via",
-      "reason": "Do not use Latin abbreviations.",
-      "replacements": ["with, through, by using"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "in order that",
-      "reason": "There is a simpler word.",
-      "replacements": ["so that"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "in the near future",
-      "reason": "There is a simpler word.",
-      "replacements": ["soon"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "inappropriate",
-      "reason": "There is a simpler word.",
-      "replacements": ["wrong, unsuitable"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "indicate",
-      "reason": "There is a simpler word.",
-      "replacements": ["show, suggest"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "inform",
-      "reason": "There is a simpler word.",
-      "replacements": ["tell"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "initally",
-      "reason": "There is a simpler word.",
-      "replacements": ["at first"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "jeopardise",
-      "reason": "There is a simpler word.",
-      "replacements": ["threaten"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "locate",
-      "reason": "There is a simpler word.",
-      "replacements": ["find, put"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "manner",
-      "reason": "There is a simpler word.",
-      "replacements": ["way"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "modification",
-      "reason": "There is a simpler word.",
-      "replacements": ["change"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "moreover",
-      "reason": "There is a simpler word.",
-      "replacements": ["and, also, as well"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "modify",
-      "reason": "There is a simpler word.",
-      "replacements": ["change"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "numerous",
-      "reason": "There is a simpler word.",
-      "replacements": ["many (or say how many)"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "objective",
-      "reason": "There is a simpler word.",
-      "replacements": ["goal"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "operate",
-      "reason": "There is a simpler word.",
-      "replacements": ["run, work"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "indicate",
-      "reason": "There is a simpler word.",
-      "replacements": ["show"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "perform",
-      "reason": "There is a simpler word.",
-      "replacements": ["do"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "prior to",
-      "reason": "There is a simpler word.",
-      "replacements": ["before"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "purchase",
-      "reason": "Buying is considered a general term, which is most commonly used to refer to everyday goods and commodities, while, purchase is considered to be a more formal word than buy. Purchasing is often used to refer to contracts and big products, whereas buying is inferred for small products.",
-      "replacements": ["buy"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "reduce",
-      "reason": "There is a simpler word.",
-      "replacements": ["cut"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "represents",
-      "reason": "There is a simpler word.",
-      "replacements": ["shows, stands for"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "requires",
-      "reason": "There is a simpler word.",
-      "replacements": ["needs"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "restriction",
-      "reason": "There is a simpler word.",
-      "replacements": ["limit"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "revised",
-      "reason": "There is a simpler word.",
-      "replacements": ["changed, new"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "hit",
-      "reason": "Don't use this word to mean 'press.'",
-      "replacements": ["press"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "i.e.",
-      "reason": "Don't use Latin abbreviations. Use 'that is' instead.",
-      "replacements": ["press"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "submit",
-      "reason": "There is a simpler word.",
-      "replacements": ["give, send"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "transfer",
-      "reason": "There is a simpler word.",
-      "replacements": ["move, change"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "in a timely manner",
-      "reason": "There is a simpler word.",
-      "replacements": ["on time"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "shall",
-      "reason": "There is a simpler word.",
-      "replacements": ["must, must not, should, may"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "and/or",
-      "reason": "There is a better word.",
-      "replacements": ["or (or rewrite the sentence to spell out both options)"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "click",
-      "reason": "Use 'select' as it applies to more devices while 'click' is specific to a mouse.",
-      "replacements": ["select"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "allows you to",
-      "reason": "There is a better word.",
-      "replacements": ["lets"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "enables you to",
-      "reason": "There is a better word.",
-      "replacements": ["lets you"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "gives you the ability to",
-      "reason": "There is a better word.",
-      "replacements": ["lets you"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "unable to",
-      "reason": "There is a better word.",
-      "replacements": ["can't"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "regarding",
-      "reason": "There is a better word.",
-      "replacements": ["about, for"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "additional",
-      "reason": "There is a better word.",
-      "replacements": ["more, other, different"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "alternative",
-      "reason": "There is a better word.",
-      "replacements": ["other"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "e.g.",
-      "reason": "There is a better word.",
-      "replacements": ["like, for example"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "due to the fact",
-      "reason": "There is a better word.",
-      "replacements": ["since, because"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "currently",
-      "reason": "There is a better word.",
-      "replacements": ["at the moment, now, right now"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "subsequent",
-      "reason": "There is a better word.",
-      "replacements": ["future, later, upcoming"],
-      "sensitivity": "medium"
-    },
-    {
-      "word": "circumstance",
-      "reason": "There is a better word.",
-      "replacements": ["case, cause, concern, action, condition, situation"],
-      "sensitivity": "medium"
-    },
-    {
-        "word": "comprehensive",
-        "reason": "There is a better word.",
-        "replacements": ["total, all, the whole, complete, full, major, large"],
-        "sensitivity": "medium"
-      },
-      {
-        "word": "extensive",
-        "reason": "There is a better word.",
-        "replacements": ["complete, full, goes on for a long time, large, long, major"],
-        "sensitivity": "medium"
-      }
+  {
+    "word": "ensure",
+    "reason": "There is a simpler word.",
+    "replacements": ["make sure"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "enable",
+    "reason": "There is a simpler word.",
+    "replacements": ["allow"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "generate",
+    "reason": "There is a simpler word.",
+    "replacements": ["produce, give, make"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "hitherto",
+    "reason": "There is a simpler word.",
+    "replacements": ["until now"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "utilize",
+    "reason": "There is a simpler word.",
+    "replacements": ["use", "apply"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "accurate",
+    "reason": "There is a simpler word.",
+    "replacements": ["correct, exact, right"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "advise",
+    "reason": "There is a simpler word.",
+    "replacements": ["recommend, tell"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "anticipate",
+    "reason": "There is a simpler word.",
+    "replacements": ["expect"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "a number of",
+    "reason": "There is a simpler word.",
+    "replacements": ["some"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "appropriate",
+    "reason": "There is a simpler word.",
+    "replacements": ["proper, right"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "contains",
+    "reason": "There is a simpler word.",
+    "replacements": ["has"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "eliminate",
+    "reason": "There is a simpler word.",
+    "replacements": ["cut, drop, end"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "assistance",
+    "reason": "There is a simpler word.",
+    "replacements": ["help"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "failed to",
+    "reason": "There is a simpler word.",
+    "replacements": ["didn't"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "finalize",
+    "reason": "There is a simpler word.",
+    "replacements": ["complete, finish"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "is able to",
+    "reason": "There is a simpler word.",
+    "replacements": ["can"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "on a monthly basis",
+    "reason": "There is a simpler word.",
+    "replacements": ["monthly"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "plethora",
+    "reason": "There is a simpler word.",
+    "replacements": ["a lot, myriad"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "in order to",
+    "reason": "There is a simpler word.",
+    "replacements": ["to"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "feasible",
+    "reason": "There is a simpler word.",
+    "replacements": ["can be done"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "frequently",
+    "reason": "There is a simpler word.",
+    "replacements": ["often"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "identical",
+    "reason": "There is a simpler word.",
+    "replacements": ["same"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "identify",
+    "reason": "There is a simpler word.",
+    "replacements": ["find, name, show"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "immediately",
+    "reason": "There is a simpler word.",
+    "replacements": ["at once"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "in addition",
+    "reason": "There is a simpler word.",
+    "replacements": ["also, besides, too"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "accomplish",
+    "reason": "There is a simpler word.",
+    "replacements": ["do, finish"],
+    "sensitivity": "medium"
+  },
+
+  {
+    "word": "additional",
+    "reason": "There is a simpler word.",
+    "replacements": ["extra, more"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "adjustment",
+    "reason": "There is a simpler word.",
+    "replacements": ["change, alteration"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "approximately",
+    "reason": "There is a simpler word.",
+    "replacements": ["about, roughly"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "attempt",
+    "reason": "There is a simpler word.",
+    "replacements": ["try"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "clarification",
+    "reason": "There is a simpler word.",
+    "replacements": ["help, explanation"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "communicate",
+    "reason": "There is a simpler word.",
+    "replacements": ["talk, write (be specific)"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "complete",
+    "reason": "There is a simpler word.",
+    "replacements": ["fill in, finish"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "difficulties",
+    "reason": "There is a simpler word.",
+    "replacements": ["problems"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "disclose",
+    "reason": "There is a simpler word.",
+    "replacements": ["tell, show"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "eligible",
+    "reason": "There is a simpler word.",
+    "replacements": ["allowed, qualified"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "facilitate",
+    "reason": "There is a simpler word.",
+    "replacements": ["help"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "illustrate",
+    "reason": "There is a simpler word.",
+    "replacements": ["show, explain"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "in lieu of",
+    "reason": "Avoid archaic language.",
+    "replacements": ["instead of"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "via",
+    "reason": "Do not use Latin abbreviations.",
+    "replacements": ["with, through, by using"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "in order that",
+    "reason": "There is a simpler word.",
+    "replacements": ["so that"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "in the near future",
+    "reason": "There is a simpler word.",
+    "replacements": ["soon"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "inappropriate",
+    "reason": "There is a simpler word.",
+    "replacements": ["wrong, unsuitable"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "indicate",
+    "reason": "There is a simpler word.",
+    "replacements": ["show, suggest"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "inform",
+    "reason": "There is a simpler word.",
+    "replacements": ["tell"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "initally",
+    "reason": "There is a simpler word.",
+    "replacements": ["at first"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "jeopardise",
+    "reason": "There is a simpler word.",
+    "replacements": ["threaten"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "locate",
+    "reason": "There is a simpler word.",
+    "replacements": ["find, put"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "manner",
+    "reason": "There is a simpler word.",
+    "replacements": ["way"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "modification",
+    "reason": "There is a simpler word.",
+    "replacements": ["change"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "moreover",
+    "reason": "There is a simpler word.",
+    "replacements": ["and, also, as well"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "modify",
+    "reason": "There is a simpler word.",
+    "replacements": ["change"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "numerous",
+    "reason": "There is a simpler word.",
+    "replacements": ["many (or say how many)"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "objective",
+    "reason": "There is a simpler word.",
+    "replacements": ["goal"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "operate",
+    "reason": "There is a simpler word.",
+    "replacements": ["run, work"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "indicate",
+    "reason": "There is a simpler word.",
+    "replacements": ["show"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "perform",
+    "reason": "There is a simpler word.",
+    "replacements": ["do"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "prior to",
+    "reason": "There is a simpler word.",
+    "replacements": ["before"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "purchase",
+    "reason": "Buying is considered a general term, which is most commonly used to refer to everyday goods and commodities, while, purchase is considered to be a more formal word than buy. Purchasing is often used to refer to contracts and big products, whereas buying is inferred for small products.",
+    "replacements": ["buy"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "reduce",
+    "reason": "There is a simpler word.",
+    "replacements": ["cut"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "represents",
+    "reason": "There is a simpler word.",
+    "replacements": ["shows, stands for"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "requires",
+    "reason": "There is a simpler word.",
+    "replacements": ["needs"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "restriction",
+    "reason": "There is a simpler word.",
+    "replacements": ["limit"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "revised",
+    "reason": "There is a simpler word.",
+    "replacements": ["changed, new"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "hit",
+    "reason": "Don't use this word to mean 'press.'",
+    "replacements": ["press"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "i.e.",
+    "reason": "Don't use Latin abbreviations. Use 'that is' instead.",
+    "replacements": ["press"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "submit",
+    "reason": "There is a simpler word.",
+    "replacements": ["give, send"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "transfer",
+    "reason": "There is a simpler word.",
+    "replacements": ["move, change"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "in a timely manner",
+    "reason": "There is a simpler word.",
+    "replacements": ["on time"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "shall",
+    "reason": "There is a simpler word.",
+    "replacements": ["must, must not, should, may"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "and/or",
+    "reason": "There is a better word.",
+    "replacements": ["or (or rewrite the sentence to spell out both options)"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "click",
+    "reason": "Use 'select' as it applies to more devices while 'click' is specific to a mouse.",
+    "replacements": ["select"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "allows you to",
+    "reason": "There is a better word.",
+    "replacements": ["lets"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "enables you to",
+    "reason": "There is a better word.",
+    "replacements": ["lets you"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "gives you the ability to",
+    "reason": "There is a better word.",
+    "replacements": ["lets you"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "unable to",
+    "reason": "There is a better word.",
+    "replacements": ["can't"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "regarding",
+    "reason": "There is a better word.",
+    "replacements": ["about, for"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "additional",
+    "reason": "There is a better word.",
+    "replacements": ["more, other, different"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "alternative",
+    "reason": "There is a better word.",
+    "replacements": ["other"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "e.g.",
+    "reason": "There is a better word.",
+    "replacements": ["like, for example"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "due to the fact",
+    "reason": "There is a better word.",
+    "replacements": ["since, because"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "currently",
+    "reason": "There is a better word.",
+    "replacements": ["at the moment, now, right now"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "subsequent",
+    "reason": "There is a better word.",
+    "replacements": ["future, later, upcoming"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "circumstance",
+    "reason": "There is a better word.",
+    "replacements": ["case, cause, concern, action, condition, situation"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "comprehensive",
+    "reason": "There is a better word.",
+    "replacements": ["total, all, the whole, complete, full, major, large"],
+    "sensitivity": "medium"
+  },
+  {
+    "word": "extensive",
+    "reason": "There is a better word.",
+    "replacements": [
+      "complete, full, goes on for a long time, large, long, major"
+    ],
+    "sensitivity": "medium"
+  }
 ]
