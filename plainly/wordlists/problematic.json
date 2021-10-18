@@ -105,86 +105,14 @@
     "reason": "Use Kyiv (derived from the Ukrainian language name) instead of Kiev (derived from the Russian language name) as the name of the Ukrainian capital..",
     "replacements": ["Kyiv"],
     "sensitivity": "high"
-  },
-  
+  }
 
   
-  {
-    "word": "ensure",
-    "reason": "There is a simpler word.",
-    "replacements": ["make sure"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "enable",
-    "reason": "There is a simpler word.",
-    "replacements": ["allow"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "generate",
-    "reason": "There is a simpler word.",
-    "replacements": ["produce, give, make"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "hitherto",
-    "reason": "There is a simpler word.",
-    "replacements": ["until now"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "utilize",
-    "reason": "There is a simpler word.",
-    "replacements": ["use, apply"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "accurate",
-    "reason": "There is a simpler word.",
-    "replacements": ["correct, exact, right"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "advise",
-    "reason": "There is a simpler word.",
-    "replacements": ["recommend, tell"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "anticipate",
-    "reason": "There is a simpler word.",
-    "replacements": ["expect"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "a number of",
-    "reason": "There is a simpler word.",
-    "replacements": ["some"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "appropriate",
-    "reason": "There is a simpler word.",
-    "replacements": ["proper, right"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "contains",
-    "reason": "There is a simpler word.",
-    "replacements": ["has"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "eliminate",
-    "reason": "There is a simpler word.",
-    "replacements": ["cut, drop, end"],
-    "sensitivity": "medium"
-  },
-  {
-    "word": "assistance",
-    "reason": "There is a simpler word.",
-    "replacements": ["help"],
-    "sensitivity": "medium"
-  }
 ]
+ 
+
+
+
+
+
+

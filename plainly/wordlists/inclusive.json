@@ -1,0 +1,48 @@
+[
+
+    {
+        "word": "blind to",
+        "reason": "Avoid ableist language that may marginalize and oppress disabled people.",
+        "replacements": ["willfully ignorant, deliberately ignoring, turning their back on, overcome by prejudice, doubly anonymous, had every reason to know, feigned ignorance"],
+        "sensitivity": "high"
+    },
+    {
+        "word": "Confined to a wheelchair",
+        "reason": "Avoid ableist language that may marginalize and oppress disabled people.",
+        "replacements": ["uses a wheelchair, wheelchair-user, in a wheelchair, began using a wheelchair, needs or requires a wheelchair, is a full-time wheelchair-user"],
+        "sensitivity": "high"
+    },
+    {
+        "word": "crazy",
+        "reason": "Avoid ableist language that may marginalize and oppress disabled people.",
+        "replacements": ["wild, confusing, unpredictable, impulsive"],
+        "sensitivity": "high"
+    },
+    {
+        "word": "mad",
+        "reason": "Avoid ableist language that may marginalize and oppress disabled people.",
+        "replacements": ["wild, confusing, unpredictable, impulsive"],
+        "sensitivity": "high"
+    },
+    {
+        "word": "stupid",
+        "reason": "Avoid ableist language that may marginalize and oppress disabled people.",
+        "replacements": ["wild, confusing, unpredictable, impulsive, reckless, fearless, lives on the edge, thrill-seeker, risk-taker, out of control"],
+        "sensitivity": "high"
+    },
+    {
+        "word": "bipolar",
+        "reason": "Avoid ableist language that may marginalize and oppress disabled people.",
+        "replacements": ["rapidly changes opinions, indecisive, extreme opposites, switching from one extreme to another"],
+        "sensitivity": "high"
+    },
+    {
+        "word": "depressing",
+        "reason": "Avoid ableist language that may marginalize and oppress disabled people.",
+        "replacements": ["sad, upsetting, disappointing, devastating, frustrating, tragic, sad reminder"],
+        "sensitivity": "high"
+    }
+
+
+
+]

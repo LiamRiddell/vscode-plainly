@@ -1,0 +1,78 @@
+[{
+    "word": "hashtag",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["the '#' symbol"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "plugin",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["a software extension"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "sandbox",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["a testing environment"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "hashtag",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["the '#' symbol"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "activate",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["turn on"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "disable",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["turn off"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "modify",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["edit"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "optimize",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["make it better"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "submit",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["send"],
+    "sensitivity": "medium" 
+  }, {
+    "word": "credentials",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["username and password"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "customizations",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["changes, edits, settings"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "URL",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["link"],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "the system",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["we"],
+    "sensitivity": "medium" 
+  }
+]

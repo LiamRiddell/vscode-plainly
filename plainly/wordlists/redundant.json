@@ -1,0 +1,127 @@
+[
+  {
+    "word": "absolutely",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "on a regular basis",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "actually",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "basically",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "currently",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "just",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "needless to say",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "slightly",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "etc",
+    "reason": "Don't use. Instead, be specific. When space is limited, use 'such as' or 'like' followed by an example or two.",
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "probably",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "in the process of",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "simply",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "definitely",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "existing",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "obviously",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "really",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "quite",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "very",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "at the end of the day",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": [""],
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "easily",
+    "reason": "If the user doesn’t find the thing to be easy, you lose their trust.",
+    "sensitivity": "medium" 
+  },
+  {
+    "word": "able of",
+    "reason": "Chances are you can remove this word without changing the meaning.",
+    "replacements": ["can"],
+    "sensitivity": "medium" 
+  }
+
+]
