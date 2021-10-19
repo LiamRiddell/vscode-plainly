@@ -17,6 +17,14 @@ const Linter = {
         // Optimization: Decorate Everything together
         const allHigh = [], allMedium = [], allLow = [];
 
+        // Lint: Complex words
+        if (Configuration.get().enableWordLists.genderNeutral) {
+            const [high, medium, low] = this.lintComplex(editor);
+            allHigh.push(...high);
+            allMedium.push(...medium);
+            allLow.push(...low);
+        }
+
         // Lint: Gender Neutral words
         if (Configuration.get().enableWordLists.genderNeutral) {
             const [high, medium, low] = this.lintGenderNeutral(editor);
@@ -65,7 +73,7 @@ const Linter = {
 
     // Complex Wordlist
     lintComplex(editor) {
-        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_COMPLEX, (word, wordDefinition, markdownTemplate) => {
+        return this._lintDocumentAgainstWordlist(editor.document, "COMPLEX", WORDLIST_COMPLEX, (word, wordDefinition, markdownTemplate) => {
             // Title
             const capitalizedWord = Utils.capitaliseFirstLetters(word);
             markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
@@ -98,6 +106,12 @@ const Linter = {
                     }
                 }
             }
+
+            // Wordlist
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendText(`Wordlist: Complex`);
 
             // Plugin signature
             markdownTemplate.appendText("\n");
@@ -109,10 +123,10 @@ const Linter = {
 
     // Gender Neutral Wordlist
     lintGenderNeutral(editor) {
-        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_GENDER_NEUTRAL, (word, wordDefinition, markdownTemplate) => {
+        return this._lintDocumentAgainstWordlist(editor.document, "GENDERNEUTRAL", WORDLIST_GENDER_NEUTRAL, (word, wordDefinition, markdownTemplate) => {
             // Title
             const capitalizedWord = Utils.capitaliseFirstLetters(word);
-            markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
+            markdownTemplate.appendMarkdown(`Gender Neutral: **${capitalizedWord}**`);
             markdownTemplate.appendText("\n");
 
             // Sensitivity
@@ -142,6 +156,12 @@ const Linter = {
                     }
                 }
             }
+
+            // Wordlist
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendText(`Wordlist: Gender Neutral`);
 
             // Plugin signature
             markdownTemplate.appendText("\n");
@@ -153,7 +173,7 @@ const Linter = {
 
     // Inclusive Wordlist
     lintInclusive(editor) {
-        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_INCLUSIVE, (word, wordDefinition, markdownTemplate) => {
+        return this._lintDocumentAgainstWordlist(editor.document, "INCLUSIVE", WORDLIST_INCLUSIVE, (word, wordDefinition, markdownTemplate) => {
             // Title
             const capitalizedWord = Utils.capitaliseFirstLetters(word);
             markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
@@ -186,6 +206,12 @@ const Linter = {
                     }
                 }
             }
+
+            // Wordlist
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendText(`Wordlist: Inclusive`);
 
             // Plugin signature
             markdownTemplate.appendText("\n");
@@ -197,7 +223,7 @@ const Linter = {
 
     // Jargon Wordlist
     lintJargon(editor) {
-        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_JARGON, (word, wordDefinition, markdownTemplate) => {
+        return this._lintDocumentAgainstWordlist(editor.document, "JARGON", WORDLIST_JARGON, (word, wordDefinition, markdownTemplate) => {
             // Title
             const capitalizedWord = Utils.capitaliseFirstLetters(word);
             markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
@@ -230,6 +256,12 @@ const Linter = {
                     }
                 }
             }
+
+            // Wordlist
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendText(`Wordlist: Jargon`);
 
             // Plugin signature
             markdownTemplate.appendText("\n");
@@ -241,7 +273,7 @@ const Linter = {
 
     // Problematic Wordlist
     lintProblematic(editor) {
-        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_PROBLEMATIC, (word, wordDefinition, markdownTemplate) => {
+        return this._lintDocumentAgainstWordlist(editor.document, "PROBLEMATIC", WORDLIST_PROBLEMATIC, (word, wordDefinition, markdownTemplate) => {
             // Title
             const capitalizedWord = Utils.capitaliseFirstLetters(word);
             markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
@@ -275,6 +307,12 @@ const Linter = {
                 }
             }
 
+            // Wordlist
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendText(`Wordlist: Problematic`);
+
             // Plugin signature
             markdownTemplate.appendText("\n");
             markdownTemplate.appendMarkdown(`______________________`);
@@ -285,7 +323,7 @@ const Linter = {
 
     // Redundant Wordlist
     lintRedundant(editor) {
-        return this._lintDocumentAgainstWordlist(editor.document, WORDLIST_REDUNDANT, (word, wordDefinition, markdownTemplate) => {
+        return this._lintDocumentAgainstWordlist(editor.document, "REDUNDANT", WORDLIST_REDUNDANT, (word, wordDefinition, markdownTemplate) => {
             // Title
             const capitalizedWord = Utils.capitaliseFirstLetters(word);
             markdownTemplate.appendMarkdown(`**${capitalizedWord}**`);
@@ -305,6 +343,12 @@ const Linter = {
             markdownTemplate.appendMarkdown(`*${wordDefinition.reason}*`);
             markdownTemplate.appendText("\n");
 
+            // Wordlist
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendMarkdown(`______________________`);
+            markdownTemplate.appendText("\n");
+            markdownTemplate.appendText(`Wordlist: Redundant`);
+
             // Plugin signature
             markdownTemplate.appendText("\n");
             markdownTemplate.appendMarkdown(`______________________`);
@@ -314,7 +358,7 @@ const Linter = {
     },
 
     // Private: 
-    _lintDocumentAgainstWordlist(document, wordlist, hoverMessageCallback) {
+    _lintDocumentAgainstWordlist(document, wordlistName, wordlist, hoverMessageCallback) {
         if (wordlist.length <= 0)
             return [[], [], []];
 
@@ -377,7 +421,8 @@ const Linter = {
                 continue;
 
             // Optimization: Generate hover message for word (once) 
-            let markdownTemplateCached = !isArrayOfWords ? this._cachedHoverPreview.get(wordDefinition.word) : null;
+            const wordCacheName = `${wordlistName}_${wordDefinition.word}`;
+            let markdownTemplateCached = !isArrayOfWords ? this._cachedHoverPreview.get(wordCacheName) : null;
             let markdownTemplate = markdownTemplateCached || new vscode.MarkdownString("", false);
 
             // Optimization: Generate hover message for word (once) but cache it when we have single word
@@ -389,7 +434,7 @@ const Linter = {
                 hoverMessageCallback(wordDefinition.word, wordDefinition, markdownTemplate);
 
                 // Cache the hover preview
-                this._cachedHoverPreview.set(wordDefinition.word, markdownTemplate);
+                this._cachedHoverPreview.set(wordCacheName, markdownTemplate);
             }
 
             // Iterate the search results and calculate the ranges
@@ -408,7 +453,7 @@ const Linter = {
                 // Optimization: Generate hover message for word (once) but cache it when we have multiple words for definition
                 if (isArrayOfWords) {
                     // Try and get cached template for this word if it exists
-                    markdownTemplateCached = this._cachedHoverPreview.get(word);
+                    markdownTemplateCached = this._cachedHoverPreview.get(`${wordlistName}_${word}`);
 
                     // Instantiate mardown template
                     markdownTemplate = markdownTemplateCached || new vscode.MarkdownString("", false);
@@ -420,7 +465,7 @@ const Linter = {
                     hoverMessageCallback(word, wordDefinition, markdownTemplate);
 
                     // Cache the hover preview
-                    this._cachedHoverPreview.set(wordDefinition.word, markdownTemplate);
+                    this._cachedHoverPreview.set(`${wordlistName}_${word}`, markdownTemplate);
                 }
 
                 // Push the decoration to an array based on severity levels
