@@ -114,10 +114,12 @@ const Linter = {
             markdownTemplate.appendText(`Wordlist: Complex`);
 
             // Plugin signature
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`______________________`);
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            if (Configuration.get().hover.providedByPlainlyWatermark) {
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`______________________`);
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            }
         });
     },
 
@@ -164,10 +166,12 @@ const Linter = {
             markdownTemplate.appendText(`Wordlist: Gender Neutral`);
 
             // Plugin signature
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`______________________`);
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            if (Configuration.get().hover.providedByPlainlyWatermark) {
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`______________________`);
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            }
         });
     },
 
@@ -214,10 +218,12 @@ const Linter = {
             markdownTemplate.appendText(`Wordlist: Inclusive`);
 
             // Plugin signature
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`______________________`);
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            if (Configuration.get().hover.providedByPlainlyWatermark) {
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`______________________`);
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            }
         });
     },
 
@@ -264,10 +270,12 @@ const Linter = {
             markdownTemplate.appendText(`Wordlist: Jargon`);
 
             // Plugin signature
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`______________________`);
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            if (Configuration.get().hover.providedByPlainlyWatermark) {
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`______________________`);
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            }
         });
     },
 
@@ -314,10 +322,12 @@ const Linter = {
             markdownTemplate.appendText(`Wordlist: Problematic`);
 
             // Plugin signature
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`______________________`);
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            if (Configuration.get().hover.providedByPlainlyWatermark) {
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`______________________`);
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            }
         });
     },
 
@@ -350,10 +360,12 @@ const Linter = {
             markdownTemplate.appendText(`Wordlist: Redundant`);
 
             // Plugin signature
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`______________________`);
-            markdownTemplate.appendText("\n");
-            markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            if (Configuration.get().hover.providedByPlainlyWatermark) {
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`______________________`);
+                markdownTemplate.appendText("\n");
+                markdownTemplate.appendMarkdown(`*Provided by Plainly*`);
+            }
         });
     },
 

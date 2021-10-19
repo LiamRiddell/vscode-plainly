@@ -30,6 +30,12 @@
           "default": true,
           "description": "Enable the advanced search, which tries handle code snippets and basic search bypass techniques."
         },
+        "plainly.hover.providedByPlainlyWatermark": {
+          "type": "boolean",
+          "scope": "resource",
+          "default": true,
+          "description": "Enable the 'Provided by Plainly' watermark to hover diaglogues."
+        },
         "plainly.enableWordLists.complex": {
           "type": "boolean",
           "scope": "resource",
