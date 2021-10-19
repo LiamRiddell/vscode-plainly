@@ -46,6 +46,207 @@ function activate(context) {
 				decorationOptions: low
 			}
 		]);
+
+		// Feedback:
+		vscode.window.showInformationMessage(`Plainly: Finished searching document and found ${high.length + medium.length + low.length} word(s) that require review.`);
+	});
+
+	let lintComplexCommand = vscode.commands.registerCommand('plainly.lintComplex', function () {
+
+		// Get the active editor
+		const editor = vscode.window.activeTextEditor;
+
+		if (!editor) {
+			vscode.window.showErrorMessage("Plainly: Unable to get the active editor.")
+			return;
+		}
+
+		// Lint: Lints each wordlist only if enabled in configuration
+		const [high, medium, low] = Linter.lintComplex(editor);
+
+		// Decorate: Highlight all the findings using sensitivity
+		Decorator.decorate(editor, [
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.high,
+				decorationOptions: high
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.medium,
+				decorationOptions: medium
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.low,
+				decorationOptions: low
+			}
+		]);
+
+		// Feedback:
+		vscode.window.showInformationMessage(`Plainly: Finished searching document and found ${high.length + medium.length + low.length} word(s) that require review.`);
+	});
+
+	let lintGenderNeutralCommand = vscode.commands.registerCommand('plainly.lintGenderNeutral', function () {
+
+		// Get the active editor
+		const editor = vscode.window.activeTextEditor;
+
+		if (!editor) {
+			vscode.window.showErrorMessage("Plainly: Unable to get the active editor.")
+			return;
+		}
+
+		// Lint: Lints each wordlist only if enabled in configuration
+		const [high, medium, low] = Linter.lintGenderNeutral(editor);
+
+		// Decorate: Highlight all the findings using sensitivity
+		Decorator.decorate(editor, [
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.high,
+				decorationOptions: high
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.medium,
+				decorationOptions: medium
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.low,
+				decorationOptions: low
+			}
+		]);
+
+		// Feedback:
+		vscode.window.showInformationMessage(`Plainly: Finished searching document and found ${high.length + medium.length + low.length} word(s) that require review.`);
+	});
+
+	let lintInclusiveCommand = vscode.commands.registerCommand('plainly.lintInclusive', function () {
+
+		// Get the active editor
+		const editor = vscode.window.activeTextEditor;
+
+		if (!editor) {
+			vscode.window.showErrorMessage("Plainly: Unable to get the active editor.")
+			return;
+		}
+
+		// Lint: Lints each wordlist only if enabled in configuration
+		const [high, medium, low] = Linter.lintInclusive(editor);
+
+		// Decorate: Highlight all the findings using sensitivity
+		Decorator.decorate(editor, [
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.high,
+				decorationOptions: high
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.medium,
+				decorationOptions: medium
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.low,
+				decorationOptions: low
+			}
+		]);
+
+		// Feedback:
+		vscode.window.showInformationMessage(`Plainly: Finished searching document and found ${high.length + medium.length + low.length} word(s) that require review.`);
+	});
+
+	let lintJargonCommand = vscode.commands.registerCommand('plainly.lintJargon', function () {
+
+		// Get the active editor
+		const editor = vscode.window.activeTextEditor;
+
+		if (!editor) {
+			vscode.window.showErrorMessage("Plainly: Unable to get the active editor.")
+			return;
+		}
+
+		// Lint: Lints each wordlist only if enabled in configuration
+		const [high, medium, low] = Linter.lintJargon(editor);
+
+		// Decorate: Highlight all the findings using sensitivity
+		Decorator.decorate(editor, [
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.high,
+				decorationOptions: high
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.medium,
+				decorationOptions: medium
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.low,
+				decorationOptions: low
+			}
+		]);
+
+		// Feedback:
+		vscode.window.showInformationMessage(`Plainly: Finished searching document and found ${high.length + medium.length + low.length} word(s) that require review.`);
+	});
+
+	let lintProblematicCommand = vscode.commands.registerCommand('plainly.lintProblematic', function () {
+
+		// Get the active editor
+		const editor = vscode.window.activeTextEditor;
+
+		if (!editor) {
+			vscode.window.showErrorMessage("Plainly: Unable to get the active editor.")
+			return;
+		}
+
+		// Lint: Lints each wordlist only if enabled in configuration
+		const [high, medium, low] = Linter.lintProblematic(editor);
+
+		// Decorate: Highlight all the findings using sensitivity
+		Decorator.decorate(editor, [
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.high,
+				decorationOptions: high
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.medium,
+				decorationOptions: medium
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.low,
+				decorationOptions: low
+			}
+		]);
+
+		// Feedback:
+		vscode.window.showInformationMessage(`Plainly: Finished searching document and found ${high.length + medium.length + low.length} word(s) that require review.`);
+	});
+
+	let lintRedundantCommand = vscode.commands.registerCommand('plainly.lintRedundant', function () {
+
+		// Get the active editor
+		const editor = vscode.window.activeTextEditor;
+
+		if (!editor) {
+			vscode.window.showErrorMessage("Plainly: Unable to get the active editor.")
+			return;
+		}
+
+		// Lint: Lints each wordlist only if enabled in configuration
+		const [high, medium, low] = Linter.lintRedundant(editor);
+
+		// Decorate: Highlight all the findings using sensitivity
+		Decorator.decorate(editor, [
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.high,
+				decorationOptions: high
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.medium,
+				decorationOptions: medium
+			},
+			{
+				decorationType: Decorator.decorationTypes.sensitivity.low,
+				decorationOptions: low
+			}
+		]);
+
+		// Feedback:
+		vscode.window.showInformationMessage(`Plainly: Finished searching document and found ${high.length + medium.length + low.length} word(s) that require review.`);
 	});
 
 	let clearCommand = vscode.commands.registerCommand('plainly.clear', function () {
@@ -61,7 +262,16 @@ function activate(context) {
 		Decorator.undecorate(editor);
 	});
 
-	context.subscriptions.push(lintCommand, clearCommand);
+	context.subscriptions.push(
+		lintCommand,
+		lintComplexCommand,
+		lintGenderNeutralCommand,
+		lintInclusiveCommand,
+		lintJargonCommand,
+		lintProblematicCommand,
+		lintRedundantCommand,
+		clearCommand
+	);
 }
 
 // This method is called when your extension is deactivated

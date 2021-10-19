@@ -11,6 +11,12 @@
   ],
   "activationEvents": [
     "onCommand:plainly.lint",
+    "onCommand:plainly.lintComplex",
+    "onCommand:plainly.lintGenderNeutral",
+    "onCommand:plainly.lintInclusive",
+    "onCommand:plainly.lintJargon",
+    "onCommand:plainly.lintProblematic",
+    "onCommand:plainly.lintRedundant",
     "onCommand:plainly.clear"
   ],
   "main": "./plainly/extension.js",
@@ -84,11 +90,35 @@
     "commands": [
       {
         "command": "plainly.lint",
-        "title": "Plainly: Check Document"
+        "title": "Plainly: Check document"
+      },
+      {
+        "command": "plainly.lintComplex",
+        "title": "Plainly: Check document for complex words"
+      },
+      {
+        "command": "plainly.lintGenderNeutral",
+        "title": "Plainly: Check document for gender words"
+      },
+      {
+        "command": "plainly.lintInclusive",
+        "title": "Plainly: Check document for inclusive words"
+      },
+      {
+        "command": "plainly.lintJargon",
+        "title": "Plainly: Check document for jargon words"
+      },
+      {
+        "command": "plainly.lintProblematic",
+        "title": "Plainly: Check document for problematic words"
+      },
+      {
+        "command": "plainly.lintRedundant",
+        "title": "Plainly: Check document for redundant words"
       },
       {
         "command": "plainly.clear",
-        "title": "Plainly: Clear Document"
+        "title": "Plainly: Clear document"
       }
     ]
   },
