@@ -347,28 +347,34 @@ const Linter = {
             // Check if the word is an array or single string 
             const isArrayOfWords = wordDefinition.word instanceof Array;
 
+            // Regex flexible characters which can be between words
+            const flexibleCharacters = "(?: |_|-|)";
+
             if (isArrayOfWords) {
                 for (let wordIndex = 0; wordIndex < wordDefinition.word.length; wordIndex++) {
                     const word = wordDefinition.word[wordIndex];
 
-                    // Generate a regex pattern for this word
-                    // 1. Global Search = g
-                    // 2. Ignore Case = i
-                    // 3. Generate indices for substring matches = d
-                    const searchWordPattern = isExperimentalSearchEnabled ? word.split("").join("(?: |_|-|)") : word;
+                    const literalWordCharacters = word.split("").map(x => `[${x}]`);
+
+                    const searchWordPattern = isExperimentalSearchEnabled ? literalWordCharacters.join(flexibleCharacters) : literalWordCharacters.join("");
+
                     const searchWordRegex = new RegExp(`${searchWordPattern}`, 'gid');
+
                     searchResults.push(...documentText.matchAll(searchWordRegex));
                 }
             } else {
-                const searchWordPattern = isExperimentalSearchEnabled ? wordDefinition.word.split("").join("(?: |_|-|)") : wordDefinition.word;
+                const literalWordCharacters = wordDefinition.word.split("").map(x => `[${x}]`);
+
+                const searchWordPattern = isExperimentalSearchEnabled ? literalWordCharacters.join(flexibleCharacters) : literalWordCharacters.join("");
+
                 const searchWordRegex = new RegExp(`${searchWordPattern}`, 'gid');
+
                 searchResults.push(...documentText.matchAll(searchWordRegex));
             }
 
             // If we have no results then check the next word
             if (!searchResults || searchResults.length <= 0)
                 continue;
-
 
             // Optimization: Generate hover message for word (once) 
             let markdownTemplateCached = !isArrayOfWords ? this._cachedHoverPreview.get(wordDefinition.word) : null;
