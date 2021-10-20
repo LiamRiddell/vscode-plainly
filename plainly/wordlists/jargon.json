@@ -60,7 +60,7 @@
   {
     "word": "customizations",
     "reason": "Avoid technical jargon if possible.",
-    "replacements": ["changes, edits, settings"],
+    "replacements": ["changes", "edits", "settings"],
     "sensitivity": "medium" 
   },
   {

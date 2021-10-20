@@ -14,7 +14,7 @@
   {
     "word": "generate",
     "reason": "There is a simpler word.",
-    "replacements": ["produce, give, make"],
+    "replacements": ["produce", "give", "make"],
     "sensitivity": "medium"
   },
   {
@@ -32,13 +32,13 @@
   {
     "word": "accurate",
     "reason": "There is a simpler word.",
-    "replacements": ["correct, exact, right"],
+    "replacements": ["correct", "exact", "right"],
     "sensitivity": "medium"
   },
   {
     "word": "advise",
     "reason": "There is a simpler word.",
-    "replacements": ["recommend, tell"],
+    "replacements": ["recommend", "tell"],
     "sensitivity": "medium"
   },
   {
@@ -56,7 +56,7 @@
   {
     "word": "appropriate",
     "reason": "There is a simpler word.",
-    "replacements": ["proper, right"],
+    "replacements": ["proper", "right"],
     "sensitivity": "medium"
   },
   {
@@ -68,7 +68,7 @@
   {
     "word": "eliminate",
     "reason": "There is a simpler word.",
-    "replacements": ["cut, drop, end"],
+    "replacements": ["cut", "drop", "end"],
     "sensitivity": "medium"
   },
   {
@@ -86,7 +86,7 @@
   {
     "word": "finalize",
     "reason": "There is a simpler word.",
-    "replacements": ["complete, finish"],
+    "replacements": ["complete", "finish"],
     "sensitivity": "medium"
   },
   {
@@ -104,7 +104,7 @@
   {
     "word": "plethora",
     "reason": "There is a simpler word.",
-    "replacements": ["a lot, myriad"],
+    "replacements": ["a lot", "myriad"],
     "sensitivity": "medium"
   },
   {
@@ -134,7 +134,7 @@
   {
     "word": "identify",
     "reason": "There is a simpler word.",
-    "replacements": ["find, name, show"],
+    "replacements": ["find", "name", "show"],
     "sensitivity": "medium"
   },
   {
@@ -152,26 +152,26 @@
   {
     "word": "accomplish",
     "reason": "There is a simpler word.",
-    "replacements": ["do, finish"],
+    "replacements": ["do", "finish"],
     "sensitivity": "medium"
   },
 
   {
     "word": "additional",
     "reason": "There is a simpler word.",
-    "replacements": ["extra, more"],
+    "replacements": ["extra", "more"],
     "sensitivity": "medium"
   },
   {
     "word": "adjustment",
     "reason": "There is a simpler word.",
-    "replacements": ["change, alteration"],
+    "replacements": ["change", "alteration"],
     "sensitivity": "medium"
   },
   {
     "word": "approximately",
     "reason": "There is a simpler word.",
-    "replacements": ["about, roughly"],
+    "replacements": ["about", "roughly"],
     "sensitivity": "medium"
   },
   {
@@ -183,19 +183,19 @@
   {
     "word": "clarification",
     "reason": "There is a simpler word.",
-    "replacements": ["help, explanation"],
+    "replacements": ["help", "explanation"],
     "sensitivity": "medium"
   },
   {
     "word": "communicate",
     "reason": "There is a simpler word.",
-    "replacements": ["talk, write (be specific)"],
+    "replacements": ["talk", "write (be specific)"],
     "sensitivity": "medium"
   },
   {
     "word": "complete",
     "reason": "There is a simpler word.",
-    "replacements": ["fill in, finish"],
+    "replacements": ["fill in", "finish"],
     "sensitivity": "medium"
   },
   {
@@ -207,13 +207,13 @@
   {
     "word": "disclose",
     "reason": "There is a simpler word.",
-    "replacements": ["tell, show"],
+    "replacements": ["tell", "show"],
     "sensitivity": "medium"
   },
   {
     "word": "eligible",
     "reason": "There is a simpler word.",
-    "replacements": ["allowed, qualified"],
+    "replacements": ["allowed", "qualified"],
     "sensitivity": "medium"
   },
   {
@@ -225,7 +225,7 @@
   {
     "word": "illustrate",
     "reason": "There is a simpler word.",
-    "replacements": ["show, explain"],
+    "replacements": ["show", "explain"],
     "sensitivity": "medium"
   },
   {
@@ -237,7 +237,7 @@
   {
     "word": "via",
     "reason": "Do not use Latin abbreviations.",
-    "replacements": ["with, through, by using"],
+    "replacements": ["with", "through", "by using"],
     "sensitivity": "medium"
   },
   {
@@ -255,13 +255,13 @@
   {
     "word": "inappropriate",
     "reason": "There is a simpler word.",
-    "replacements": ["wrong, unsuitable"],
+    "replacements": ["wrong", "unsuitable"],
     "sensitivity": "medium"
   },
   {
     "word": "indicate",
     "reason": "There is a simpler word.",
-    "replacements": ["show, suggest"],
+    "replacements": ["show", "suggest"],
     "sensitivity": "medium"
   },
   {
@@ -285,7 +285,7 @@
   {
     "word": "locate",
     "reason": "There is a simpler word.",
-    "replacements": ["find, put"],
+    "replacements": ["find", "put"],
     "sensitivity": "medium"
   },
   {
@@ -303,7 +303,7 @@
   {
     "word": "moreover",
     "reason": "There is a simpler word.",
-    "replacements": ["and, also, as well"],
+    "replacements": ["and", "also", "as well"],
     "sensitivity": "medium"
   },
   {
@@ -327,7 +327,7 @@
   {
     "word": "operate",
     "reason": "There is a simpler word.",
-    "replacements": ["run, work"],
+    "replacements": ["run", "work"],
     "sensitivity": "medium"
   },
   {
@@ -363,7 +363,7 @@
   {
     "word": "represents",
     "reason": "There is a simpler word.",
-    "replacements": ["shows, stands for"],
+    "replacements": ["shows", "stands for"],
     "sensitivity": "medium"
   },
   {
@@ -381,7 +381,7 @@
   {
     "word": "revised",
     "reason": "There is a simpler word.",
-    "replacements": ["changed, new"],
+    "replacements": ["changed", "new"],
     "sensitivity": "medium"
   },
   {
@@ -399,13 +399,13 @@
   {
     "word": "submit",
     "reason": "There is a simpler word.",
-    "replacements": ["give, send"],
+    "replacements": ["give", "send"],
     "sensitivity": "medium"
   },
   {
     "word": "transfer",
     "reason": "There is a simpler word.",
-    "replacements": ["move, change"],
+    "replacements": ["move", "change"],
     "sensitivity": "medium"
   },
   {
@@ -417,7 +417,7 @@
   {
     "word": "shall",
     "reason": "There is a simpler word.",
-    "replacements": ["must, must not, should, may"],
+    "replacements": ["must", "must not", "should", "may"],
     "sensitivity": "medium"
   },
   {
@@ -459,13 +459,13 @@
   {
     "word": "regarding",
     "reason": "There is a better word.",
-    "replacements": ["about, for"],
+    "replacements": ["about", "for"],
     "sensitivity": "medium"
   },
   {
     "word": "additional",
     "reason": "There is a better word.",
-    "replacements": ["more, other, different"],
+    "replacements": ["more", "other", "different"],
     "sensitivity": "medium"
   },
   {
@@ -477,44 +477,44 @@
   {
     "word": "e.g.",
     "reason": "There is a better word.",
-    "replacements": ["like, for example"],
+    "replacements": ["like", "for example"],
     "sensitivity": "medium"
   },
   {
     "word": "due to the fact",
     "reason": "There is a better word.",
-    "replacements": ["since, because"],
+    "replacements": ["since", "because"],
     "sensitivity": "medium"
   },
   {
     "word": "currently",
     "reason": "There is a better word.",
-    "replacements": ["at the moment, now, right now"],
+    "replacements": ["at the moment", "now", "right now"],
     "sensitivity": "medium"
   },
   {
     "word": "subsequent",
     "reason": "There is a better word.",
-    "replacements": ["future, later, upcoming"],
+    "replacements": ["future", "later", "upcoming"],
     "sensitivity": "medium"
   },
   {
     "word": "circumstance",
     "reason": "There is a better word.",
-    "replacements": ["case, cause, concern, action, condition, situation"],
+    "replacements": ["case", "cause", "concern", "action", "condition", "situation"],
     "sensitivity": "medium"
   },
   {
     "word": "comprehensive",
     "reason": "There is a better word.",
-    "replacements": ["total, all, the whole, complete, full, major, large"],
+    "replacements": ["total", "all", "the whole", "complete", "full", "major", "large"],
     "sensitivity": "medium"
   },
   {
     "word": "extensive",
     "reason": "There is a better word.",
     "replacements": [
-      "complete, full, goes on for a long time, large, long, major"
+      "complete", "full", "goes on for a long time", "large", "long", "major"
     ],
     "sensitivity": "medium"
   }
