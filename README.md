@@ -1,4 +1,4 @@
-# Welcome to Plainly 👋
+Dark mode, real-time sync, full analytics access, custom duration, and more...# Welcome to Plainly 👋
 
 Plainly is a VS Code extension that helps write simpler and clearer copy. It suggests hundreds of plain English alternatives to complex, non-inclusive, and unsuitable words. Wordlists are aimed for UI copy, user guide articles, and technical documentation.
 
@@ -26,13 +26,15 @@ A section describing how to install and configure the extension.
 
 ## How to contribute
 
-
+To be added...
 
 ## Known issues
 
 Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Our vision
+
+To be added...
 
 ## Useful links
 
