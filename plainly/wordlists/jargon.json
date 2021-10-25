@@ -74,5 +74,11 @@
     "reason": "Avoid technical jargon if possible.",
     "replacements": ["we"],
     "sensitivity": "medium" 
+  },
+  {
+    "word": "click the",
+    "reason": "Interface changes so often that sometimes you'd better stick to 'select.'",
+    "replacements": ["select"],
+    "sensitivity": "medium" 
   }
 ]
