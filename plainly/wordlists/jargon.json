@@ -80,5 +80,11 @@
     "reason": "Interface changes so often that sometimes you'd better stick to 'select.'",
     "replacements": ["select"],
     "sensitivity": "medium" 
+  },
+  {
+    "word": "type",
+    "reason": "Avoid technical jargon if possible.",
+    "replacements": ["enter"],
+    "sensitivity": "medium" 
   }
 ]
