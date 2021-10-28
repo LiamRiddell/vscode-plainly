@@ -5,7 +5,7 @@
   "publisher": "AndriiSabinich",
   "version": "0.0.1",
   "repository": { "type": "git", "url": "https://github.com/LiamRiddell/vscode-plainly.git" },
-  "icon": "keyboard.png",
+  "icon": "img/icon.PNG",
   "engines": {
     "vscode": "^1.61.0"
   },
