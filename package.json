@@ -3,7 +3,7 @@
   "displayName": "Plainly",
   "description": "Plainly is a VS Code extension that helps write simpler and clearer copy for user guides and technical documentation.",
   "publisher": "AndriiSabinich",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": { "type": "git", "url": "https://github.com/LiamRiddell/vscode-plainly.git" },
   "icon": "icon.PNG",
   "engines": {
