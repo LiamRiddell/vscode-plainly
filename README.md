@@ -1,6 +1,8 @@
-Dark mode, real-time sync, full analytics access, custom duration, and more...# Welcome to Plainly 👋
+Welcome to Plainly 👋
 
 Plainly is a VS Code extension that helps write simpler and clearer copy. It suggests hundreds of plain English alternatives to complex, non-inclusive, and unsuitable words. Wordlists are aimed for UI copy, user guide articles, and technical documentation.
+
+Reach out to us at andrijsabinich@gmail.com 📩
 
 ## What's inside
 Plainly scans your writing and spots the issues around:
@@ -20,25 +22,23 @@ Plainly scans your writing and spots the issues around:
 - docs.microsoft.com
 - autistichoya.com
 
-## How to install
-
-A section describing how to install and configure the extension.
-
 ## How to contribute
 
-To be added...
+You are welcome to contribute to our [GitHub](https://github.com/LiamRiddell/vscode-plainly).
 
 ## Known issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Regex word boundaries
 
-## Our vision
+## Our mission
 
-To be added...
+To make wordy docs simple and more human.
 
 ## Useful links
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
+## Special thanks 💕
 
+[Liam Riddell](https://www.liamriddell.co.uk/) for developing the code behind Plainly.

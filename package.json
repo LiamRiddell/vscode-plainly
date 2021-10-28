@@ -4,6 +4,7 @@
   "description": "Plainly is a VS Code extension that helps write simpler and clearer copy for user guides and technical documentation.",
   "publisher": "AndriiSabinich",
   "version": "0.0.1",
+  "icon": "img/keyboard.png",
   "engines": {
     "vscode": "^1.61.0"
   },
