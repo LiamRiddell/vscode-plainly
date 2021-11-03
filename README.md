@@ -28,7 +28,7 @@ You are welcome to contribute to our [GitHub](https://github.com/LiamRiddell/vsc
 
 ## Known issues
 
-- Regex word boundaries
+- Overlapping search results.
 
 ## Our mission
 
@@ -38,6 +38,9 @@ To make wordy docs simple and more human.
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+
+## Developers
+- Project is wrote in Javascript for speed of development as an early plugin concept. If the plugin gainst traction we will be looking into moving into the recommended TypeScript implementation instead which will allow us to implement additional features easier and make a more stable plugin.
 
 ## Special thanks 💕
 
