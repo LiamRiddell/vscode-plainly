@@ -40,7 +40,7 @@ To make wordy docs simple and more human.
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 ## Developers
-- Project is wrote in Javascript for speed of development as an early plugin concept. If the plugin gainst traction we will be looking into moving into the recommended TypeScript implementation instead which will allow us to implement additional features easier and make a more stable plugin.
+- Project is wrote in Javascript for speed of development as an early plugin concept. If the plugin gains traction, we will re-write the project in the recommended TypeScript implementation instead. This will allow us to implement additional features easier and make a more stable plugin.
 
 ## Special thanks 💕
 
